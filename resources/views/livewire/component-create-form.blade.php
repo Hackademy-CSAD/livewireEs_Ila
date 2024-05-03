@@ -1,20 +1,19 @@
-<div>
-    <form>
-        
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" wire:wiremodel="title">
-          <textarea name="" id="" cols="30" rows="10" wire:wiremodel="title"></textarea>
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-</div>
+<form wire:submit="store">
+    <div class="mb-3">
+        <label for="name" class="form-label">name</label>
+        <input type="type" class="form-control" id="name" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">description</label>
+        <input type="text" class="form-control" wire:model="description" id="edescription">
+    </div>
+    <div class="mb-3 form-check">
+        <input for="img" type="file" class="form-check-input" id="img">
+        <label class="form-label" for="img">image</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <select class="form selected" wire:model="category_id" id="category" class="arial label">selezione una categoria di bag</select>
+    @foreach ($categories as $category)
+        <option value="{{ $category->id }}">{{ $category->name }}</option>
+    @endforeach
+</form>

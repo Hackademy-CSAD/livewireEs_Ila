@@ -8,6 +8,7 @@
     @vite(['resources/css/app.css','resources/js/app.js'])
     <!-- Bootstrap CSS -->
 
+    @vite(['resoucers/css/app.css','resources/js/app.js'])
     <title>Hello, world!</title>
   </head>
   <body>
@@ -16,7 +17,7 @@
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-</x-navbar>
+<x-navbar/>
     {{$slot}}
 
   </body>

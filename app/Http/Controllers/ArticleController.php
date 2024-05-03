@@ -10,6 +10,3 @@ class ArticleController extends Controller
         return view ('create');
     }
 }
-public function save (){
-    return
-}
